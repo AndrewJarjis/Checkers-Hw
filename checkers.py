@@ -22,12 +22,14 @@ def resize_board(board, new_size):
 
 
 def pivot_board(board):
-    n = board.shape[0]
-    new_board = np.empty(board)
-    for i in range(n):
-        for j in range(n):
-            new_board[i][j] = board[j][i]
-    return new_board
+    pivoted_board = np.empty((board.shape[1], board.shape[0]), dtype=board.dtype)
+    for i in range(board.shape[0]):
+        for j in range(board.shape[1]):
+            pivoted_board[j][i] = board[i][j]
+    return pivoted_board
+
+
+
 
 
 if __name__ == '__main__':

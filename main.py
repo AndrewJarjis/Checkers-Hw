@@ -7,9 +7,12 @@ def game():
         print("Invalid board size.")
         return
 
-    board = checkers.build_board(size)
-
+    board = checkers.build_board(5)
     print(board)
+    resized_board = checkers.resize_board(board, 4)
+    print(resized_board)
+    pivoted_board = checkers.pivot_board(board)
+    print(pivoted_board)
 
     empty_count = checkers.get_count(board, 'Empty')
     red_count = checkers.get_count(board, 'Red')

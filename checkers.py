@@ -1,5 +1,5 @@
 import numpy as np
-from numpy import random, count_nonzero, resize
+from numpy import random, resize
 
 
 def build_board(size):
